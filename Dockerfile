@@ -5,4 +5,4 @@ FROM nginx:latest
 ARG CACHEBUST=1
 
 # Replace the content of index.html with 'Hello' followed by the current timestamp
-RUN echo "Hello - $(date)" > /usr/share/nginx/html/index.html
+RUN echo "Hello - $(TZ='Asia/Shanghai' date)" > /usr/share/nginx/html/index.html
